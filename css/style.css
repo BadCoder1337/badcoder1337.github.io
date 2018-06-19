@@ -10,7 +10,10 @@ a:visited {
   color: #000
 }
 
-#popup-container {
+.popup-container {
+  width: 100%;
+  min-width: 800px;
+  /* height: 60px; */
   position: relative;
   top: 0;
   left: 0;
@@ -18,19 +21,15 @@ a:visited {
 }
 
 .popup {
+  width: 100%;
   height: 60px;
   background: #fff;
   display: block;
 }
 
-.popup .left {
+.popup span {
   position: relative;
-  height: 60px;
-  width: 60px;
   float: left;
-}
-
-.popup .left span:before {
   font-size: 40px;
   line-height: 60px;
   width: 60px;
@@ -41,27 +40,27 @@ a:visited {
   color: #FFF;
 }
 
-.popup .left .youtube:before {
+.popup .youtube {
   background: #ec2727 url("../img/youtube.png") no-repeat 10px 10px;
 }
 
-.popup .left .discord:before {
+.popup .discord {
   background: #7289DA url("../img/discord.png") no-repeat 10px 10px;
 }
 
-.popup .left .vk:before {
+.popup .vk {
   background: #45668e url('../img/vk.png') no-repeat 10px 10px;
 }
 
-.popup .left .twitch:before {
+.popup .twitch {
   background: #6542a6 url("../img/twitch.png") no-repeat 10px 10px;
 }
 
-.popup .left .steam:before {
+.popup .steam {
   background: #000 url("../img/steam.png") no-repeat 10px 10px;
 }
 
-.popup .right {
+.popup a {
   position: relative;
   height: 60px;
   /* width: 400px; */
@@ -74,8 +73,4 @@ a:visited {
   font-family: 'Montserrat';
   color: #101010;
   text-indent: 0px;
-}
-
-.popup .right a {
-  white-space: nowrap;
 }
