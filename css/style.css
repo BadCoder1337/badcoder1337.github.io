@@ -11,9 +11,7 @@ a:visited {
 }
 
 .popup-container {
-  width: 100%;
   min-width: 800px;
-  /* height: 60px; */
   position: relative;
   top: 0;
   left: 0;
@@ -21,7 +19,6 @@ a:visited {
 }
 
 .popup {
-  width: 100%;
   height: 60px;
   background: #fff;
   display: block;
@@ -63,7 +60,6 @@ a:visited {
 .popup a {
   position: relative;
   height: 60px;
-  /* width: 400px; */
   float: left;
   color: #101010;
   padding-left: 10px;
