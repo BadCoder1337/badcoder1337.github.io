@@ -1,0 +1,81 @@
+body {
+  margin: 5%
+}
+
+a:link {
+  color: #666
+}
+
+a:visited {
+  color: #000
+}
+
+#popup-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.popup {
+  height: 60px;
+  background: #fff;
+  display: block;
+}
+
+.popup .left {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  float: left;
+}
+
+.popup .left span:before {
+  font-size: 40px;
+  line-height: 60px;
+  width: 60px;
+  height: 60px;
+  content: "";
+  display: block;
+  text-align: center;
+  color: #FFF;
+}
+
+.popup .left .youtube:before {
+  background: #ec2727 url("../img/youtube.png") no-repeat 10px 10px;
+}
+
+.popup .left .discord:before {
+  background: #7289DA url("../img/discord.png") no-repeat 10px 10px;
+}
+
+.popup .left .vk:before {
+  background: #45668e url('../img/vk.png') no-repeat 10px 10px;
+}
+
+.popup .left .twitch:before {
+  background: #6542a6 url("../img/twitch.png") no-repeat 10px 10px;
+}
+
+.popup .left .steam:before {
+  background: #000 url("../img/steam.png") no-repeat 10px 10px;
+}
+
+.popup .right {
+  position: relative;
+  height: 60px;
+  /* width: 400px; */
+  float: left;
+  color: #101010;
+  padding-left: 10px;
+  font-size: 30px;
+  line-height: 60px;
+  white-space: nowrap;
+  font-family: 'Montserrat';
+  color: #101010;
+  text-indent: 0px;
+}
+
+.popup .right a {
+  white-space: nowrap;
+}
