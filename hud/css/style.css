@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&subset=cyrillic");
+:root {
+    --r6-blue: #006ecc;
+    --r6-orange: #dd7624;
+}
+
+p {
+    margin: 0px;
+}
+
+h1 {
+    margin: 0px;
+}
+
+h2 {
+    margin: 0px;
+}
+
+h3 {
+    margin: 0px;
+}
+
+html, body {
+    width: 1920px;
+    height: 120px;
+    margin: 0px;
+    --logo: calc(100vh/18);
+  }
+  body {
+    background-color: transparent;
+    transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-style: preserve-3d;
+  }
+  .template {
+    position: absolute;
+    height: 1080px;
+    width: 1920px;
+    left: 165px;
+    top: 198px;
+  }
+  .header {
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.22) 1%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 100%);
+    height: 60px;
+  }
+  .header-parallelogram {
+    position: absolute;
+    width: calc(2.86458%);
+    height: 100%;
+  }
+  .header-parallelogram#left {
+    background: var(--r6-blue);
+    transform: skew(20deg);
+    left: calc(43.75%);
+  }
+  .header-parallelogram#left > * {
+    transform: skew(-20deg);
+  }
+  .header-parallelogram#right {
+    background: var(--r6-orange);
+    transform: skew(-20deg);
+    right: calc(43.75%);
+  }
+  .header-parallelogram#right > * {
+    transform: skew(20deg);
+  }
+  .header-logo {
+    position: absolute;
+    height: 100%;
+    width: calc(3.125%);
+    background-size: contain;
+    transform: scale(0.8);
+  }
+  .header-logo#left {
+    background-image: url("../img/default.jpg");
+    left: 768px;
+  }
+  .header-logo#right {
+    background-image: url("../img/default.jpg");
+    right: 768px;
+  }
+  .team-title, .title {
+    position: absolute;
+    vertical-align: middle;
+    height: 100%;
+    line-height: 60px;
+    font-family: Oswald, normal;
+    color: white;
+    top: 0px;
+    font-size: 39px;
+  }
+  .team-title#left {
+    text-align: right;
+    right: 60.5%;
+  }
+  .team-title#right {
+    text-align: left;
+    left: 60.5%;
+  }
+  .title#title {
+    left: 0.5%;
+  }
+  .esl-logo {
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    right: 0px;
+    display: none;
+    background-image: url("../img/esl_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: scale(0.8);
+  }
+  .score {
+    position: absolute;
+    font-family: Oswald, normal;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    font-size: 45px;
+  }
+  .logo {
+    margin: 0px auto;
+    width: 60px;
+    position: relative;
+    background-image: url("../img/r6-russia.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 120px;
+    transform-style: preserve-3d;
+    transform: scale(0.9);
+  }
