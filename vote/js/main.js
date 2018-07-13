@@ -18,6 +18,7 @@ const socket = io('http://localhost:9876');
 socket.on('message', (message)=>{
     console.log(message);
     for (let i = 0; i < 2; i++) {
-        $('.percent')[i].innerHTML = message.percent[i];  
+        $('.percent')[i].innerHTML = message.percent[i]+'%';  
     }
+    $('.progress-bar-part').css('width', message.percent[0]+'%')
 })
