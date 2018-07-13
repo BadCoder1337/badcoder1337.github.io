@@ -8,9 +8,9 @@ for (let i = 0; i < 2; i++) {
 $('.footer-name').text(settings.name);
 
 if (getParameterByName('f')) {
-    $('.header').show();
+    $('.footer').show();
 } else {
-    $('.header').fadeIn();
+    $('.footer').fadeIn();
 }
 
 const socket = io('http://localhost:9876');
