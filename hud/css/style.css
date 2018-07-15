@@ -44,6 +44,7 @@ html, body {
     width: 100%;
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%);
     height: 60px;
+    top: 3px;
   }
   .header-parallelogram {
     position: absolute;
@@ -61,7 +62,7 @@ html, body {
   .header-parallelogram#right {
     background: var(--r6-orange);
     transform: skew(-20deg);
-    right: calc(43.75%);
+    right: calc(43.70%);
   }
   .header-parallelogram#right > * {
     transform: skew(20deg);
@@ -126,14 +127,14 @@ html, body {
     font-size: 45px;
   }
   .logo {
-    margin: 0px auto;
-    width: 60px;
-    position: relative;
-    background-image: url("../img/r6-russia.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 120px;
-    transform-style: preserve-3d;
-    transform: scale(0.9);
+      margin: 0px auto;
+      position: relative;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 120px;
+      transform-style: preserve-3d;
+      background-image: url("../img/r6-inv.png");
+      width: 120px;
+      transform: translate3d(0px, -20px, 0px) scale3d(0.65, 0.65, 1);
   }
