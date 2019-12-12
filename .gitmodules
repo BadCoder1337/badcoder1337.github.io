@@ -1,0 +1,4 @@
+[submodule "solver"]
+	path = solver
+	url = https://github.com/BadCoder1337/equations-solver
+	branch = gh-pages
