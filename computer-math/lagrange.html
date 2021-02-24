@@ -1,0 +1,71 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <script>
+            function main() {
+                const button = document.getElementById("compute");
+                button.addEventListener("click", compute);
+            }
+
+            function compute() {
+                const input = document.getElementById("input");
+                const points = input.value
+                    .split("\n")
+                    .map((p) => p.split(" ").map(parseFloat))
+                    .map(pa => ({ x: pa[0], y: pa[1] }));
+
+                const K = [];
+                for (let m = 0; m < points.length; m++) K[m] = 0;
+                for (let m = 0; m < points.length; m++) {
+                    const newK = [];
+                    for (let nc = 0; nc < points.length; nc++)
+                        newK[nc] = 0;
+                    if (m > 0) {
+                        newK[0] =
+                            -points[0].x / (points[m].x - points[0].x);
+                        newK[1] = 1 / (points[m].x - points[0].x);
+                    } else {
+                        newK[0] =
+                            -points[1].x / (points[m].x - points[1].x);
+                        newK[1] = 1 / (points[m].x - points[1].x);
+                    }
+                    let startIndex = 1;
+                    if (m == 0) startIndex = 2;
+                    for (let n = startIndex; n < points.length; n++) {
+                        if (m == n) continue;
+                        for (let nc = points.length - 1; nc >= 1; nc--) {
+                            newK[nc] =
+                                newK[nc] *
+                                    (-points[n].x / (points[m].x - points[n].x)) +
+                                newK[nc - 1] /
+                                    (points[m].x - points[n].x);
+                        }
+                        newK[0] =
+                            newK[0] *
+                            (-points[n].x / (points[m].x - points[n].x));
+                    }
+                    for (let nc = 0; nc < points.length; nc++)
+                        K[nc] += points[m].y * newK[nc];
+                }
+
+                const result = K.reverse().map((v, i) => `${v >= 0 ? "+" + v.toFixed(4) : v.toFixed(4)}*x^${K.length - i - 1}`)
+
+                document.getElementById("output").innerText=`Формула: ${result.join("")}`
+
+                console.log(points, K);
+            }
+
+            window.addEventListener("load", main);
+        </script>
+    </head>
+    <body>
+        <h3>Интерполяция по Лагранжу</h3>
+        <div>
+            Ввод: x y (построчно)
+        </div>
+        <textarea id="input" cols="30" rows="10"></textarea>
+        <p id="output"></p>
+        <p>
+            <button id="compute">Посчитать</button>
+        </p>
+    </body>
+</html>
