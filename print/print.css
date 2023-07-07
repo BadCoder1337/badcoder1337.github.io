@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: solid 1px red;
+}
+
+ section {
+    overflow: hidden;
+    margin: 0;
+    break-after: always;
+    padding: 5mm 5mm 5mm 20mm;
+    break-inside: avoid;
+}
+
+.wrapper {
+    overflow: hidden;
+    height: calc(100%);
+}
+
+@page { margin: 0; }
+@page a0portrait  { size: 841mm 1189mm; }
+@page a0landscape { size: 1189mm 841mm; }
+@page a1portrait  { size: 594mm 841mm; }
+@page a1landscape { size: 841mm 594mm; }
+@page a2portrait  { size: 420mm 594mm; }
+@page a2landscape { size: 594mm 420mm; }
+@page a3portrait  { size: 297mm 420mm; }
+@page a3landscape { size: 420mm 297mm; }
+@page a4portrait  { size: 210mm 297mm; }
+@page a4landscape { size: 297mm 210mm; }
+@page a5portrait  { size: 148mm 210mm; }
+@page a5landscape { size: 210mm 148mm; }
+
+/* -1mm to fix A0 portrait */
+section.A0.portrait { page: a0portrait; width: 840mm; height: 1188mm; }
+section.A0.landscape { page: a0landscape; width: 1189mm; height: 841mm; }
+section.A1.portrait { page: a1portrait; width: 594mm; height: 841mm; }
+section.A1.landscape { page: a1landscape; width: 841mm; height: 594mm; }
+section.A2.portrait { page: a2portrait; width: 420mm; height: 594mm; }
+section.A2.landscape { page: a2landscape; width: 594mm; height: 420mm; }
+section.A3.portrait { page: a3portrait; width: 297mm; height: 420mm; }
+section.A3.landscape { page: a3landscape; width: 420mm; height: 297mm; }
+section.A4.portrait { page: a4portrait; width: 210mm; height: 297mm; }
+section.A4.landscape { page: a4landscape; width: 297mm; height: 210mm; }
+section.A5.portrait { page: a5portrait; width: 148mm; height: 210mm; }
+section.A5.landscape { page: a5landscape; width: 210mm; height: 148mm; }
+
+/** screen preview **/
+@media screen {
+    body {
+        background: #e0e0e0;
+    }
+     section {
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.3);
+        margin: 5mm auto;
+    }
+}
